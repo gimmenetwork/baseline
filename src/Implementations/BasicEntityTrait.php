@@ -14,9 +14,11 @@ namespace GimmeMore\Baseline\Implementations;
 
 use GimmeMore\Baseline\Contracts\Entity;
 use Symfony\Component\Uid\Uuid;
+use Doctrine\ORM\Mapping as ORM;
 
 trait BasicEntityTrait
 {
+    #[ORM\Id(), ORM\Column(type: 'uuid', unique: true)]
     private readonly Uuid $id;
 
     public function getId(): Uuid
