@@ -10,7 +10,7 @@
 
 declare(strict_types=1);
 
-namespace kstupak\Baseline\Contracts;
+namespace GimmeMore\Baseline\Contracts;
 
 use Symfony\Component\Uid\Uuid;
 

@@ -1,17 +1,17 @@
 {
-    "name": "kstupak/baseline",
+    "name": "gimmenetwork/baseline",
     "description": "A bunch of components/contracts/abstract stuff that I have to do every project",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "kstupak\\Baseline\\": "src/"
+            "GimmeMore\\Baseline\\": "src/"
         }
     },
     "authors": [
         {
             "name": "Kostiantyn Stupak",
-            "email": "konstantin.stupak@gmail.com"
+            "email": "konstantin.stupak@gimmemore.com"
         }
     ],
     "minimum-stability": "stable",

@@ -10,9 +10,9 @@
 
 declare(strict_types=1);
 
-namespace kstupak\Baseline\Implementations;
+namespace GimmeMore\Baseline\Implementations;
 
-use kstupak\Baseline\Contracts\Entity;
+use GimmeMore\Baseline\Contracts\Entity;
 use Symfony\Component\Uid\Uuid;
 
 trait BasicEntityTrait
