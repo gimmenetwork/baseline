@@ -15,13 +15,25 @@ namespace GimmeMore\Baseline\Implementations;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Doctrine\ORM\EntityNotFoundException;
 use GimmeMore\Baseline\Contracts\BasicRepository;
+use Symfony\Component\Uid\Uuid;
 
 abstract class AbstractRepository extends ServiceEntityRepository implements BasicRepository
 {
     public function all() : Collection
     {
         return new ArrayCollection($this->findAll());
+    }
+
+    public function get(Uuid|string $identifier) : object
+    {
+        $entity = $this->find($identifier);
+        if (!$entity) {
+            throw new EntityNotFoundException($identifier);
+        }
+
+        return $entity;
     }
 
     public function save(object $object, ?bool $defer = false): void

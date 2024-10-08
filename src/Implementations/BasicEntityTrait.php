@@ -19,7 +19,7 @@ use Doctrine\ORM\Mapping as ORM;
 trait BasicEntityTrait
 {
     #[ORM\Id(), ORM\Column(type: 'uuid', unique: true)]
-    private readonly Uuid $id;
+    private Uuid $id;
 
     public function getId(): Uuid
     {
